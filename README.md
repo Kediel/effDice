@@ -1,4 +1,6 @@
-Based on EFF updates to diceware found at eff.org/diceware
+![Go](https://img.shields.io/badge/go-%2300ADD8.svg?style=for-the-badge&logo=go&logoColor=white)
+
+Based on [EFF](https://eff.org/dice) updates to diceware.
 PoC to implement the generation method found in the PDF.
 
 1 Step 1: Roll five dice all at once. Note the faces that come up.
@@ -22,4 +24,4 @@ Wordlist notes:
 
 Usage: go run dice.go -wordlist=(1-3)
 
-Thank you to Joseph Bonneau and Anrold G. Reinhold for the creations.
+Thank you to [Joseph Bonneau](https://jbonneau.com) and [Arnold G. Reinhold](http://diceware.com/) for the creations.

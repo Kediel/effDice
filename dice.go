@@ -1,16 +1,17 @@
 package main
 
 import (
-	"fmt"
+	"bufio"
 	"crypto/rand"
+	"flag"
+	"fmt"
+	"log"
 	"math"
 	"math/big"
-	"flag"
 	"os"
-	"log"
-	"bufio"
 	"strconv"
 	"strings"
+	"github.com/fatih/color"
 )
 
 var (
@@ -159,6 +160,10 @@ func main() {
 
 	entropy := shannonEntropy(fullPassphrase)
 
-fmt.Printf("Your new secret passphrase: %s has an entropy of %.4f bits.\n", fullPassphrase, entropy) 
+	// Create Sprint color function
+	green := color.New(color.FgHiGreen).SprintFunc()
+	yellow := color.New(color.FgYellow).SprintFunc()
+
+	fmt.Printf("Your new secret passphrase: %s has an entropy of %s bits.\n", green(fullPassphrase), yellow(entropy)) 
 
 }
